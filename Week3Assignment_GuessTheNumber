@@ -13,8 +13,7 @@ secret_number = 0
 
 # helper function to start and restart the game
 def new_game():
-    global num_range
-    global count
+    global num_range, count
     if num_range == 100:
         range100()
     else:
@@ -23,11 +22,7 @@ def new_game():
 # define event handlers for control panel
 def range100():
     # button that changes the range to [0,100) and starts a new game 
-    global count
-    global tries
-    global tries2
-    global secret_number
-    global num_range
+    global count, tries, tries2, secret_number, num_range
     num_range = 100
     tries2 = 7
     count = 0
@@ -39,11 +34,7 @@ def range100():
 
 def range1000():
     # button that changes the range to [0,1000) and starts a new game     
-    global tries2
-    global secret_number
-    global count
-    global tries
-    global num_range
+    global tries2, secret_number, count, tries, num_range
     tries2 = 10
     num_range = 1000
     count = 0
@@ -57,10 +48,7 @@ def range1000():
 def input_guess(guess):
     # main game logic goes here	
     integer = int(guess)
-    global secret_number
-    global count
-    global tries
-    global tries2
+    global secret_number, count, tries, tries2
     print "Guess was " + str(integer) 
     count += 1
     tries = tries2 - count
